@@ -24,6 +24,14 @@ The `data-toggle` attribute, popularized by Twitter Bootstrap, is also supported
 <span data-incrementable="star">1336</span> followers.
 ```
 
+Install
+---
+
+Simply use [bower](http://twitter.github.com/bower/)
+```
+bower install incrementor
+```
+
 Contact
 ---
 
