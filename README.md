@@ -1,7 +1,7 @@
 incrementor.js
 ==============
 
-A minuscule (*282* bytes gzipped) tool for automatic incrementation hooks.
+A minuscule (282 bytes gzipped) tool for automatic incrementation hooks.
 
 Examples
 ---
