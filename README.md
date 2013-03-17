@@ -12,7 +12,7 @@ Just assign the `data-incrementor` attribute to the button and `data-incrementab
 
 ```html
 <button data-incrementor="follow">Follow</button>
-<span data-incrementable="follow">99</span> stargazers.
+<span data-incrementable="follow">99</span> followers.
 ```
 
 ### Toggle example
@@ -21,7 +21,7 @@ The `data-toggle` attribute, popularized by Twitter Bootstrap, is also supported
 
 ```html
 <button data-incrementor="star" data-toggle="button">Star</button>
-<span data-incrementable="star">1336</span> followers.
+<span data-incrementable="star">1336</span> stargazers.
 ```
 
 Install
