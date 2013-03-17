@@ -1,6 +1,6 @@
 (function() {
   var increment = function(el, diff) {
-    var currentIncrementation = parseInt(el.innerHTML, 10);
+    var currentIncrementation = parseInt(el.innerHTML, 10) || 0;
     el.innerHTML = currentIncrementation + diff;
   };
 
