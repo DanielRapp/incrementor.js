@@ -4,8 +4,7 @@
     el.innerHTML = currentIncrementation + diff;
   };
 
-  var toggle = function(incrementable) {
-    var active = this.classList.contains('active');
+  var toggle = function(incrementable, active) {
     increment(incrementable, active ? -1 : 1);
     // Fix Bootstrap compatibility issues
     if ($().button === null)
@@ -20,7 +19,7 @@
         , incrementable = document.querySelector(selector)
         , toggleable = this.getAttribute('data-toggle') !== null;
 
-      if (toggleable) toggle(incrementable);
+      if (toggleable) toggle(incrementable, this.classList.contains('active'));
       else increment(incrementable, 1);
     });
   });
