@@ -4,18 +4,12 @@
     el.innerHTML = currentIncrementation + diff;
   };
 
-  var toggle = function(incrementable, active) {
-    if (active) {
-      increment(incrementable, -1);
-      // Fix Bootstrap compatibility issues
-      if ($().button === null)
-        incrementor.classList.remove('active');
-    }
-    else {
-      increment(incrementable, 1);
-      if ($().button === null)
-        incrementor.classList.add('active');
-    }
+  var toggle = function(incrementable) {
+    var active = this.classList.contains('active');
+    increment(incrementable, active ? -1 : 1);
+    // Fix Bootstrap compatibility issues
+    if ($().button === null)
+      incrementor.classList.toggle('active');
   };
 
   var incrementors = document.querySelectorAll('[data-incrementor]');
@@ -26,7 +20,7 @@
         , incrementable = document.querySelector(selector)
         , toggleable = this.getAttribute('data-toggle') !== null;
 
-      if (toggleable) toggle(incrementable, this.classList.contains('active'));
+      if (toggleable) toggle(incrementable);
       else increment(incrementable, 1);
     });
   });
